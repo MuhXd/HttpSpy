@@ -14,7 +14,12 @@ end;
 
 local Serializer = loadstring(game:HttpGet("https://github.com/MuhXd/HttpSpy/blob/main/leopard-syn-port.lua?raw=Port"))();
 local clonef = clonefunction or function(a) return a end;
-local pconsole = clonef(rconsoleprint or print());
+local pconsole
+if rconsoleprint then
+	pconsole = clonef(rconsoleprint);
+else 
+	pconsole = clonef(print);
+end
 local format = clonef(string.format);
 local gsub = clonef(string.gsub);
 local match = clonef(string.match);
