@@ -3,7 +3,7 @@ A powerful and highly efficient network debugging tool for Roblox (and exploits)
 > Please don't use this on any commerical scripts, you'll most likely get yourself detected (lol)
 
 ## THIS IS A FORK OF HTTPSPY!
-
+> please check out the original creator here [httpsspy](https://github.com/NotDSF/HttpSpy)
 ## Usage
 > Be sure to execute the HttpSpy before the target script!
 ```lua
