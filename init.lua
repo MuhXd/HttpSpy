@@ -2,10 +2,6 @@
     HttpSpy v1.1.3
 ]]
 
-if rconsoleprint then
-    rconsoleprint("Join Discord frfr https://discord.gg/JwNQ6HZGFw")
-end;
-
 assert(syn or http, "Unsupport exploit (should support syn.request or http.request)");
 
 local options = ({...})[1] or { AutoDecode = true, Highlighting = true, SaveLogs = true, CLICommands = true, ShowResponse = true, BlockedURLs = {}, API = true };
@@ -17,7 +13,7 @@ if options.SaveLogs then
 end;
 
 local Serializer = loadstring(game:HttpGet("https://raw.githubusercontent.com/NotDSF/leopard/main/rbx/leopard-syn.lua"))();
-local clonef = clonefunction;
+local clonef = clonefunction or function(a) return a end);
 local pconsole = clonef(rconsoleprint);
 local format = clonef(string.format);
 local gsub = clonef(string.gsub);
