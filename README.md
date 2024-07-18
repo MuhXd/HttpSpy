@@ -7,7 +7,7 @@ A powerful and highly efficient network debugging tool for Roblox (and exploits)
 ## Usage
 > Be sure to execute the HttpSpy before the target script!
 ```lua
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NotDSF/HttpSpy/main/init.lua](https://github.com/MuhXd/HttpSpy/blob/main/init.lua?raw=Yes"))({
+loadstring(game:HttpGet("https://github.com/MuhXd/HttpSpy/blob/main/init.lua?raw=Yes"))({
     AutoDecode = true, -- Automatically decodes JSON
     Highlighting = true, -- Highlights the output
     SaveLogs = true, -- Save logs to a text file
@@ -44,7 +44,7 @@ HttpSpy.OnRequest<event>(<table request>);
 
 ### Example
 ```lua
-local HttpSpy = loadstring(game:HttpGet("https://raw.githubusercontent.com/NotDSF/HttpSpy/main/init.lua](https://github.com/MuhXd/HttpSpy/blob/main/init.lua?raw=Yes"))({
+local HttpSpy = loadstring(game:HttpGet("https://github.com/MuhXd/HttpSpy/blob/main/init.lua?raw=Yes"))({
     AutoDecode = true, -- Automatically decodes JSON
     Highlighting = true, -- Highlights the output
     SaveLogs = true, -- Save logs to a text file
