@@ -13,7 +13,7 @@ if options.SaveLogs then
 end;
 
 local Serializer = loadstring(game:HttpGet("https://raw.githubusercontent.com/NotDSF/leopard/main/rbx/leopard-syn.lua"))();
-local clonef = clonefunction or function(a) return a end);
+local clonef = clonefunction or function(a) return a end;
 local pconsole = clonef(rconsoleprint);
 local format = clonef(string.format);
 local gsub = clonef(string.gsub);
