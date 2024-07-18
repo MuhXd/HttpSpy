@@ -8,7 +8,7 @@ local options = ({...})[1] or { AutoDecode = true, Highlighting = true, SaveLogs
 local version = "v1.1.3";
 local logname = string.format("%d-%s-log.txt", game.PlaceId, os.date("%d_%m_%y"));
 
-if options.SaveLogs then
+if options.SaveLogs and writefile then
 	writefile(logname, string.format("Http Logs from %s\n\n", os.date("%d/%m/%y"))) 
 end;
 
