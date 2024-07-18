@@ -9,7 +9,7 @@ local byte     = clonef(str.byte);
 local match    = clonef(str.match);
 local getfn    = clonef(gme.GetFullName);
 local info     = clonef(debug.getinfo);
-local huge     = math.huge; -- just like your mother
+local huge     = math.huge; -- just like your mother (why tf was this in here -viper)
 local Type     = clonef(typeof);
 local Pairs    = clonef(pairs);
 local Assert   = clonef(assert);
@@ -250,11 +250,16 @@ function Serializer.FormatString(str)
   end;
   return formatString(str);
 end;
-
+local highlightingAllowed = false
+s,r = pcall(function()
+if rconsoleprint then
+highlightingAllowed = true;
+    end
+end)
 function Serializer.UpdateConfig(options) 
   Assert(Type(options) == "table", "invalid argument #1 to 'UpdateConfig' (table expected)");
   config.spaces = options.spaces or 4;
-  config.highlighting = options.highlighting;
+  config.highlighting = options.highlighting and highlightingAllowed;
   Tab = rep(" ", config.spaces or 4);
 end;
 
