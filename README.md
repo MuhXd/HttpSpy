@@ -63,10 +63,10 @@ HttpSpy:HookSynRequest("https://httpbin.org/get", function(response)
     return response;
 end);
 
-print(syn.request({ Url = "https://httpbin.org/get" }).Body);
+print(request({ Url = "https://httpbin.org/get" }).Body);
 
 HttpSpy:UnHookSynRequest("https://httpbin.org/get");
 HttpSpy:ProxyHost("httpbin.org", "google.com");
 
-print(syn.request({ Url = "https://httpbin.org/get" }).Body);
+print(request({ Url = "https://httpbin.org/get" }).Body);
 ```
